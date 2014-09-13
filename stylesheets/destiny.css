@@ -79,11 +79,11 @@
   color: #962f30;
 }
 /* line 76, ../sass/destiny.scss */
-.destiny-overlay.destiny-accept .destiny-content {
+.destiny-overlay.destiny-success .destiny-content {
   border-color: #149d3e;
 }
 /* line 80, ../sass/destiny.scss */
-.destiny-overlay.destiny-accept .destiny-row .destiny-icon {
+.destiny-overlay.destiny-success .destiny-row .destiny-icon {
   border-color: #5cb85c;
   color: #5cb85c;
 }
@@ -95,4 +95,13 @@
 .destiny-overlay.destiny-primary .destiny-row .destiny-icon {
   border-color: #428bca;
   color: #428bca;
+}
+/* line 98, ../sass/destiny.scss */
+.destiny-overlay.destiny-default .destiny-content {
+  border-color: #2f0000;
+}
+/* line 102, ../sass/destiny.scss */
+.destiny-overlay.destiny-default .destiny-row .destiny-icon {
+  border-color: #770700;
+  color: #770700;
 }

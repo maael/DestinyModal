@@ -72,7 +72,7 @@
       }
     }
   }
-  &.destiny-accept {
+  &.destiny-success {
     .destiny-content {
       border-color:  rgb(20,157,62);
     }
@@ -91,6 +91,17 @@
       .destiny-icon {
         border-color: rgb(66,139,202);
         color: rgb(66,139,202);
+      }
+    }
+  }
+  &.destiny-default {
+    .destiny-content {
+      border-color:  rgb(47,0,0);
+    }
+    .destiny-row {
+      .destiny-icon {
+        border-color: rgb(119,7,0);
+        color: rgb(119,7,0);
       }
     }
   }
