@@ -1,0 +1,89 @@
+/* line 1, ../sass/destiny.scss */
+.destiny-overlay {
+  background-color: rgba(51, 51, 51, 0.6);
+  color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+/* line 11, ../sass/destiny.scss */
+.destiny-overlay .destiny-content {
+  background-color: rgba(27, 27, 27, 0.7);
+  border-top: 0.5vmin solid;
+  left: 50%;
+  max-height: 90%;
+  height: 40%;
+  margin-top: -4vmin;
+  min-height: 40%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+/* line 24, ../sass/destiny.scss */
+.destiny-overlay .destiny-row {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+/* line 29, ../sass/destiny.scss */
+.destiny-overlay .destiny-row .destiny-icon {
+  border: 1.8vmin solid;
+  border-radius: 50%;
+  display: table-cell;
+  font-size: 20vmin;
+  height: 20vmin;
+  line-height: 20vmin;
+  text-align: center;
+  width: 20vmin;
+}
+/* line 39, ../sass/destiny.scss */
+.destiny-overlay .destiny-row .destiny-text {
+  display: table-cell;
+  font-size: 3vmin;
+  position: relative;
+  top: 1vmin;
+  left: 3vmin;
+  vertical-align: top;
+}
+/* line 46, ../sass/destiny.scss */
+.destiny-overlay .destiny-row .destiny-text h1 {
+  font-size: 3vmin;
+  letter-spacing: 0.2em;
+  margin-bottom: 1.6em;
+  text-transform: uppercase;
+}
+/* line 54, ../sass/destiny.scss */
+.destiny-overlay .destiny-buttons {
+  background-color: #000000;
+  bottom: -4vmin;
+  font-size: 3vmin;
+  height: 4vmin;
+  line-height: 4vmin;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+/* line 65, ../sass/destiny.scss */
+.destiny-overlay.destiny-warning .destiny-content {
+  border-color: #4e1412;
+}
+/* line 69, ../sass/destiny.scss */
+.destiny-overlay.destiny-warning .destiny-row .destiny-icon {
+  border-color: #962f30;
+  color: #962f30;
+}
+/* line 76, ../sass/destiny.scss */
+.destiny-overlay.destiny-accept .destiny-content {
+  border-color: #149d3e;
+}
+/* line 80, ../sass/destiny.scss */
+.destiny-overlay.destiny-accept .destiny-row .destiny-icon {
+  border-color: #5cb85c;
+  color: #5cb85c;
+}
