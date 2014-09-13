@@ -87,3 +87,12 @@
   border-color: #5cb85c;
   color: #5cb85c;
 }
+/* line 87, ../sass/destiny.scss */
+.destiny-overlay.destiny-primary .destiny-content {
+  border-color: #0070ac;
+}
+/* line 91, ../sass/destiny.scss */
+.destiny-overlay.destiny-primary .destiny-row .destiny-icon {
+  border-color: #428bca;
+  color: #428bca;
+}

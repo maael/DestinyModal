@@ -83,4 +83,15 @@
       }
     }
   }
+  &.destiny-primary {
+    .destiny-content {
+      border-color:  rgb(0,112,172);
+    }
+    .destiny-row {
+      .destiny-icon {
+        border-color: rgb(66,139,202);
+        color: rgb(66,139,202);
+      }
+    }
+  }
 }
