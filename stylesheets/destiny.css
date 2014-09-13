@@ -70,38 +70,56 @@
   width: 100%;
 }
 /* line 65, ../sass/destiny.scss */
-.destiny-overlay.destiny-warning .destiny-content {
-  border-color: #4e1412;
+.destiny-overlay.destiny-default .destiny-content {
+  border-color: #2f0000;
 }
 /* line 69, ../sass/destiny.scss */
-.destiny-overlay.destiny-warning .destiny-row .destiny-icon {
-  border-color: #962f30;
-  color: #962f30;
+.destiny-overlay.destiny-default .destiny-row .destiny-icon {
+  border-color: #770700;
+  color: #770700;
 }
 /* line 76, ../sass/destiny.scss */
-.destiny-overlay.destiny-success .destiny-content {
-  border-color: #149d3e;
-}
-/* line 80, ../sass/destiny.scss */
-.destiny-overlay.destiny-success .destiny-row .destiny-icon {
-  border-color: #5cb85c;
-  color: #5cb85c;
-}
-/* line 87, ../sass/destiny.scss */
 .destiny-overlay.destiny-primary .destiny-content {
   border-color: #0070ac;
 }
-/* line 91, ../sass/destiny.scss */
+/* line 80, ../sass/destiny.scss */
 .destiny-overlay.destiny-primary .destiny-row .destiny-icon {
   border-color: #428bca;
   color: #428bca;
 }
+/* line 87, ../sass/destiny.scss */
+.destiny-overlay.destiny-success .destiny-content {
+  border-color: #149d3e;
+}
+/* line 91, ../sass/destiny.scss */
+.destiny-overlay.destiny-success .destiny-row .destiny-icon {
+  border-color: #5cb85c;
+  color: #5cb85c;
+}
 /* line 98, ../sass/destiny.scss */
-.destiny-overlay.destiny-default .destiny-content {
-  border-color: #2f0000;
+.destiny-overlay.destiny-info .destiny-content {
+  border-color: #13a5c0;
 }
 /* line 102, ../sass/destiny.scss */
-.destiny-overlay.destiny-default .destiny-row .destiny-icon {
-  border-color: #770700;
-  color: #770700;
+.destiny-overlay.destiny-info .destiny-row .destiny-icon {
+  border-color: #5bc0de;
+  color: #5bc0de;
+}
+/* line 109, ../sass/destiny.scss */
+.destiny-overlay.destiny-warning .destiny-content {
+  border-color: #a89230;
+}
+/* line 113, ../sass/destiny.scss */
+.destiny-overlay.destiny-warning .destiny-row .destiny-icon {
+  border-color: #f0ad4e;
+  color: #f0ad4e;
+}
+/* line 120, ../sass/destiny.scss */
+.destiny-overlay.destiny-danger .destiny-content {
+  border-color: #4e1412;
+}
+/* line 124, ../sass/destiny.scss */
+.destiny-overlay.destiny-danger .destiny-row .destiny-icon {
+  border-color: #962f30;
+  color: #962f30;
 }

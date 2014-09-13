@@ -61,25 +61,14 @@
     text-align: center;
     width: 100%;
   }
-  &.destiny-warning {
+  &.destiny-default {
     .destiny-content {
-      border-color:  rgb(78,20,18);
+      border-color:  rgb(47,0,0);
     }
     .destiny-row {
       .destiny-icon {
-        border-color: rgb(150,47,48);
-        color: rgb(150,47,48);
-      }
-    }
-  }
-  &.destiny-success {
-    .destiny-content {
-      border-color:  rgb(20,157,62);
-    }
-    .destiny-row {
-      .destiny-icon {
-        border-color: rgb(92,184,92);
-        color: rgb(92,184,92);
+        border-color: rgb(119,7,0);
+        color: rgb(119,7,0);
       }
     }
   }
@@ -94,14 +83,47 @@
       }
     }
   }
-  &.destiny-default {
+  &.destiny-success {
     .destiny-content {
-      border-color:  rgb(47,0,0);
+      border-color:  rgb(20,157,62);
     }
     .destiny-row {
       .destiny-icon {
-        border-color: rgb(119,7,0);
-        color: rgb(119,7,0);
+        border-color: rgb(92,184,92);
+        color: rgb(92,184,92);
+      }
+    }
+  }
+  &.destiny-info {
+    .destiny-content {
+      border-color:  rgb(19,165,192);
+    }
+    .destiny-row {
+      .destiny-icon {
+        border-color: rgb(91,192,222);
+        color: rgb(91,192,222);
+      }
+    }
+  }
+  &.destiny-warning {
+    .destiny-content {
+      border-color:  rgb(168,146,48);
+    }
+    .destiny-row {
+      .destiny-icon {
+        border-color: rgb(240,173,78);
+        color: rgb(240,173,78);
+      }
+    }    
+  }
+  &.destiny-danger {
+    .destiny-content {
+      border-color:  rgb(78,20,18);
+    }
+    .destiny-row {
+      .destiny-icon {
+        border-color: rgb(150,47,48);
+        color: rgb(150,47,48);
       }
     }
   }
