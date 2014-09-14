@@ -1,4 +1,4 @@
-function addDestinyModal(title,main,type) {
+function addDestinyModal(title,main,type,iconName) {
   //Create basic nodes  
   var overlay = document.createElement('div'),
       content = document.createElement('div'),
@@ -10,21 +10,24 @@ function addDestinyModal(title,main,type) {
       textMain = document.createElement('p'),
       buttons = document.createElement('div'),
       textTitleNode = document.createTextNode(title),
-      textMainNode = document.createTextNode(main),
-      iconName = "fa-";
+      textMainNode = document.createTextNode(main);
+  //Set iconName initially
+  iconName = "fa-"+iconName || null;
   //Add text to nodes
   textTitle.appendChild(textTitleNode);
   textMain.appendChild(textMainNode);
-  //Choose icon based on modal type
-  switch(type){
-    case "success":
-      iconName += "check-circle";
-      break;
-    case "info":
-      iconName += "info-circle";
-      break;
-    default:
-      iconName += "exclamation-circle";
+  //Choose icon based on modal type if not already set
+  if(iconName !== null){
+    switch(type){
+      case "success":
+        iconName += "check-circle";
+        break;
+      case "info":
+        iconName += "info-circle";
+        break;
+      default:
+        iconName += "exclamation-circle";
+    }
   }
   //Add classes
   overlay.className = "destiny-overlay destiny-"+type;
