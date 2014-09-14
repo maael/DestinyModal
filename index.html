@@ -9,22 +9,13 @@
 </head>
 <body>
   <section class="content">
+    <button onclick="addDestinyModal('Default','This is a default modal.','default');">Add Default</button>
+    <button onclick="addDestinyModal('Primary','This is a primary modal.','primary');">Add Primary</button>
+    <button onclick="addDestinyModal('Success','This is a success modal.','success');">Add Success</button>
+    <button onclick="addDestinyModal('Info','This is a info modal.','info');">Add Info</button>
+    <button onclick="addDestinyModal('Warning','This is a warning modal.','warning');">Add Warning</button>
+    <button onclick="addDestinyModal('Danger','This is a danger modal.','danger');">Add Danger</button>
   </section>
-  <div class="destiny-overlay destiny-primary">
-    <div class="destiny-content">
-      <div class="destiny-row">
-        <div class="destiny-icon">
-          <i class="fa fa-exclamation-circle"></i>
-        </div>
-        <div class="destiny-text">
-          <h1>Cannot Transfer</h4>
-          <p>There isn't enough space.</p>
-        </div>
-      </div>
-      <div class="destiny-buttons">
-        Dismiss
-      </div>
-    </div>
-  </div>
+  <script src="javascripts/DestinyModal.js"></script>
 </body>
 </html>
