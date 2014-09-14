@@ -1,15 +1,16 @@
-function DestinyModal(title,main,type,iconName) {
+function DestinyModal(title,main,type,buttons,iconName) {
   this.title = title || "";
   this.main = main || "";
   this.type = type || "default";
   this.iconName = "fa-"+iconName || null;
+  this.buttons = buttons || [];
   this.add = function () {
     //Create basic nodes  
     var overlay = document.createElement('div'),
         content = document.createElement('div'),
         row = document.createElement('div'),
         icon = document.createElement('div'),
-        i = document.createElement('i'),
+        iclass = document.createElement('i'),
         text = document.createElement('div'),
         textTitle = document.createElement('h1'),
         textMain = document.createElement('p'),
@@ -32,25 +33,40 @@ function DestinyModal(title,main,type,iconName) {
           this.iconName = "fa-exclamation-circle";
       }
     }
+    //Add buttons
+    for(var i = 0; i<this.buttons.length; i++) {
+      var buttonText = document.createTextNode(this.buttons[i].text),
+          button = document.createElement('p');
+      button.appendChild(buttonText);
+      if(this.buttons[i].class){
+        button.className = this.buttons[i].class;
+      }
+      buttons.appendChild(button);
+    }
     //Add classes and ids
     overlay.className = "destiny-overlay destiny-"+this.type;
     content.className = "destiny-content";
     row.className = "destiny-row";
     icon.className = "destiny-icon";
-    i.className = "fa "+this.iconName;
+    iclass.className = "fa "+this.iconName;
     text.className = "destiny-text";
     buttons.className = "destiny-buttons";
     //Nesting
     text.appendChild(textTitle);
     text.appendChild(textMain);
-    icon.appendChild(i);
+    icon.appendChild(iclass);
     row.appendChild(icon);
     row.appendChild(text);
     content.appendChild(row);
     content.appendChild(buttons);
     overlay.appendChild(content);
-
+    //Add overlay to document
     document.body.appendChild(overlay);
+    //Add dismissal events
+    var dismisses = document.getElementsByClassName('destiny-dismiss');
+    for(var j = 0; j<dismisses.length; j++) {
+      dismisses[j].addEventListener('click',this.remove,false);
+    }
   };
   this.remove = function () {
     var overlays = document.getElementsByClassName('destiny-overlay'),
