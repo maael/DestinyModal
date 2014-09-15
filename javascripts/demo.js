@@ -34,7 +34,17 @@ document.getElementById('infoBtn').addEventListener('click',function(){
     'text': 'This is a info modal.',
     'type': 'info',
     'buttons':[
-      {text:'Accept'},
+      {text:'Accept',class:'accept-modal'},
+      {text:'Dismiss',class:'destiny-dismiss'}
+    ]
+  }).add();
+},false);
+document.getElementByClassName('accept-modal')[0].addEventListener('click',function(){
+  DestinyModal({
+    'title': 'Accepted',
+    'text': 'This is a modal in a modal.',
+    'type': 'success',
+    'buttons':[
       {text:'Dismiss',class:'destiny-dismiss'}
     ]
   }).add();
@@ -49,7 +59,7 @@ document.getElementById('warningBtn').addEventListener('click',function(){
     ]
   }).add();
 },false);
-document.getElementById('warningBtn').addEventListener('click',function(){
+document.getElementById('dangerBtn').addEventListener('click',function(){
   DestinyModal({
     'title': 'Danger',
     'text': 'This is a danger modal.',
