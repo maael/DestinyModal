@@ -1,9 +1,10 @@
-function DestinyModal(title,main,type,buttons,iconName) {
-  this.title = title || "";
-  this.main = main || "";
-  this.type = type || "default";
-  this.iconName = "fa-"+iconName || null;
-  this.buttons = buttons || [];
+function DestinyModal(options) {
+  options = options || {};
+  this.title = options.title || "";
+  this.main = options.main || "";
+  this.type = options.type || "default";
+  this.iconName = "fa-"+options.iconName || null;
+  this.buttons = options.buttons || [];
   this.add = function () {
     //Create basic nodes  
     var overlay = document.createElement('div'),

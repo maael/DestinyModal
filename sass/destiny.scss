@@ -60,6 +60,14 @@
     position: absolute;
     text-align: center;
     width: 100%;
+    p {
+      cursor: pointer;
+      display: inline-block;
+      margin-right: 5vmin;
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
   }
   &.destiny-default {
     .destiny-content {
