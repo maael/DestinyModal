@@ -36,8 +36,8 @@ This function will remove the topmost modal from the DOM.
 This function will remove all modals from the DOM.
 
 ###Button Object
-Button objects are objects which have the properties text and class. Text is a required property, while class is optional. If the button object has the class ```destiny-dismiss```, it will automatically add an eventListener for the button's click event that will trigger the ```remove()``` function.
+Button objects are objects which have the properties text and class. Text is a required property, while class is optional. If the button object has the class ```destiny-dismiss```, it will automatically add an eventListener for the button's click event that will trigger the ```remove()``` function. If the button object has the class ```destiny-dismiss-all```, it will automatically add an eventListener for the button's click event that will trigger the ```removeAll()``` function.
 
 ```JavaScript
-{'text': Button Text, 'class': Button class, 'function': Function to call on click}
+{'text': Button Text, 'class': Button Class, 'function': Function to call on click}
 ```
