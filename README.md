@@ -1,5 +1,5 @@
 #Destiny Modal
-A recreation of Destiny's modal windows in SASS and JavaScript. Demo can be found [here](https://github.com/github/markup/tree/master#html-sanitization).
+A recreation of Destiny's modal windows in SASS and JavaScript. Demo can be found [here](http://maael.github.io/DestinyModal/).
 
 ###Modal Creation
 ```JavaScript
