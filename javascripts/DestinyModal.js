@@ -48,7 +48,7 @@ function DestinyModal(options) {
       buttons.appendChild(button);
     }
     //Add classes and ids
-    overlay.className = "destiny-overlay destiny-"+this.type;
+    overlay.className = "destiny-overlay destiny-fade-in destiny-"+this.type;
     content.className = "destiny-content";
     row.className = "destiny-row";
     icon.className = "destiny-icon";
@@ -79,14 +79,23 @@ function DestinyModal(options) {
   this.remove = function () {
     var overlays = document.getElementsByClassName('destiny-overlay'),
         index = (overlays.length>1) ? (overlays.length-1) : 0;
+        overlays[index].className = overlays[index].className.replace("destiny-fade-in","destiny-fade-out");
     if(overlays[index]){
-      overlays[index].parentNode.removeChild(overlays[index]);
+      setTimeout(function(){overlays[index].parentNode.removeChild(overlays[index]);}, 1000);
     }
   };
   this.removeAll = function () {
-    while(document.getElementsByClassName('destiny-overlay').length>0){
-      var overlays = document.getElementsByClassName('destiny-overlay');
-      overlays[0].parentNode.removeChild(overlays[0]);
+    var overlays = document.getElementsByClassName('destiny-overlay');
+    function delegatedRemove(s) {
+      return function() {
+        overlays[s].parentNode.removeChild(overlays[s]);
+      };
+    }
+    for(var i = (overlays.length-1); i>=0 ;i--) {
+      overlays[i].className = overlays[i].className.replace("destiny-fade-in","destiny-fade-out");
+      if(overlays[i]){
+        setTimeout(delegatedRemove(i), 1000);
+      }
     }
   };
   return this;

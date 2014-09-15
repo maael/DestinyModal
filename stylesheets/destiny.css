@@ -1,4 +1,4 @@
-/* line 1, ../sass/destiny.scss */
+/* line 2, ../sass/destiny.scss */
 .destiny-overlay {
   background-color: rgba(51, 51, 51, 0.6);
   color: #FFFFFF;
@@ -6,11 +6,12 @@
   font-weight: lighter;
   height: 100%;
   left: 0;
+  opacity: 0;
   position: absolute;
   top: 0;
   width: 100%;
 }
-/* line 11, ../sass/destiny.scss */
+/* line 13, ../sass/destiny.scss */
 .destiny-overlay .destiny-content {
   background-color: rgba(27, 27, 27, 0.7);
   border-top: 0.5vmin solid;
@@ -24,14 +25,14 @@
   transform: translate(-50%, -50%);
   width: 100%;
 }
-/* line 24, ../sass/destiny.scss */
+/* line 26, ../sass/destiny.scss */
 .destiny-overlay .destiny-row {
   left: 50%;
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
 }
-/* line 29, ../sass/destiny.scss */
+/* line 31, ../sass/destiny.scss */
 .destiny-overlay .destiny-row .destiny-icon {
   border: 1.8vmin solid;
   border-radius: 50%;
@@ -42,7 +43,7 @@
   text-align: center;
   width: 20vmin;
 }
-/* line 39, ../sass/destiny.scss */
+/* line 41, ../sass/destiny.scss */
 .destiny-overlay .destiny-row .destiny-text {
   display: table-cell;
   font-size: 3vmin;
@@ -51,14 +52,14 @@
   left: 3vmin;
   vertical-align: top;
 }
-/* line 46, ../sass/destiny.scss */
+/* line 48, ../sass/destiny.scss */
 .destiny-overlay .destiny-row .destiny-text h1 {
   font-size: 3vmin;
   letter-spacing: 0.2em;
   margin-bottom: 1.6em;
   text-transform: uppercase;
 }
-/* line 54, ../sass/destiny.scss */
+/* line 56, ../sass/destiny.scss */
 .destiny-overlay .destiny-buttons {
   background-color: #000000;
   bottom: -4vmin;
@@ -69,67 +70,146 @@
   text-align: center;
   width: 100%;
 }
-/* line 63, ../sass/destiny.scss */
+/* line 65, ../sass/destiny.scss */
 .destiny-overlay .destiny-buttons p {
   cursor: pointer;
   display: inline-block;
   margin-right: 5vmin;
 }
-/* line 67, ../sass/destiny.scss */
+/* line 69, ../sass/destiny.scss */
 .destiny-overlay .destiny-buttons p:last-of-type {
   margin-right: 0;
 }
-/* line 73, ../sass/destiny.scss */
+/* line 75, ../sass/destiny.scss */
 .destiny-overlay.destiny-default .destiny-content {
   border-color: #2f5c59;
 }
-/* line 77, ../sass/destiny.scss */
+/* line 79, ../sass/destiny.scss */
 .destiny-overlay.destiny-default .destiny-row .destiny-icon {
   border-color: #777777;
   color: #777777;
 }
-/* line 84, ../sass/destiny.scss */
+/* line 86, ../sass/destiny.scss */
 .destiny-overlay.destiny-primary .destiny-content {
   border-color: #0070ac;
 }
-/* line 88, ../sass/destiny.scss */
+/* line 90, ../sass/destiny.scss */
 .destiny-overlay.destiny-primary .destiny-row .destiny-icon {
   border-color: #428bca;
   color: #428bca;
 }
-/* line 95, ../sass/destiny.scss */
+/* line 97, ../sass/destiny.scss */
 .destiny-overlay.destiny-success .destiny-content {
   border-color: #149d3e;
 }
-/* line 99, ../sass/destiny.scss */
+/* line 101, ../sass/destiny.scss */
 .destiny-overlay.destiny-success .destiny-row .destiny-icon {
   border-color: #5cb85c;
   color: #5cb85c;
 }
-/* line 106, ../sass/destiny.scss */
+/* line 108, ../sass/destiny.scss */
 .destiny-overlay.destiny-info .destiny-content {
   border-color: #13a5c0;
 }
-/* line 110, ../sass/destiny.scss */
+/* line 112, ../sass/destiny.scss */
 .destiny-overlay.destiny-info .destiny-row .destiny-icon {
   border-color: #5bc0de;
   color: #5bc0de;
 }
-/* line 117, ../sass/destiny.scss */
+/* line 119, ../sass/destiny.scss */
 .destiny-overlay.destiny-warning .destiny-content {
   border-color: #a89230;
 }
-/* line 121, ../sass/destiny.scss */
+/* line 123, ../sass/destiny.scss */
 .destiny-overlay.destiny-warning .destiny-row .destiny-icon {
   border-color: #f0ad4e;
   color: #f0ad4e;
 }
-/* line 128, ../sass/destiny.scss */
+/* line 130, ../sass/destiny.scss */
 .destiny-overlay.destiny-danger .destiny-content {
   border-color: #4e1412;
 }
-/* line 132, ../sass/destiny.scss */
+/* line 134, ../sass/destiny.scss */
 .destiny-overlay.destiny-danger .destiny-row .destiny-icon {
   border-color: #962f30;
   color: #962f30;
+}
+/* line 141, ../sass/destiny.scss */
+.destiny-overlay.destiny-fade-in {
+  -moz-animation: destiny-fade-in 1s 1 both;
+  -webkit-animation: destiny-fade-in 1s 1 both;
+  animation: destiny-fade-in 1s 1 both;
+}
+/* line 144, ../sass/destiny.scss */
+.destiny-overlay.destiny-fade-out {
+  -moz-animation: destiny-fade-out 1s 1 both;
+  -webkit-animation: destiny-fade-out 1s 1 both;
+  animation: destiny-fade-out 1s 1 both;
+}
+
+@-moz-keyframes destiny-fade-in {
+  /* line 150, ../sass/destiny.scss */
+  0% {
+    opacity: 0;
+  }
+
+  /* line 153, ../sass/destiny.scss */
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes destiny-fade-in {
+  /* line 150, ../sass/destiny.scss */
+  0% {
+    opacity: 0;
+  }
+
+  /* line 153, ../sass/destiny.scss */
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes destiny-fade-in {
+  /* line 150, ../sass/destiny.scss */
+  0% {
+    opacity: 0;
+  }
+
+  /* line 153, ../sass/destiny.scss */
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes destiny-fade-out {
+  /* line 158, ../sass/destiny.scss */
+  0% {
+    opacity: 1;
+  }
+
+  /* line 161, ../sass/destiny.scss */
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes destiny-fade-out {
+  /* line 158, ../sass/destiny.scss */
+  0% {
+    opacity: 1;
+  }
+
+  /* line 161, ../sass/destiny.scss */
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes destiny-fade-out {
+  /* line 158, ../sass/destiny.scss */
+  0% {
+    opacity: 1;
+  }
+
+  /* line 161, ../sass/destiny.scss */
+  100% {
+    opacity: 0;
+  }
 }
