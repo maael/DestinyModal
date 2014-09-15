@@ -41,3 +41,7 @@ Button objects are objects which have the properties text and class. Text is a r
 ```JavaScript
 {'text': Button Text, 'class': Button Class, 'function': Function to call on click}
 ```
+
+##To Do
+- Make animation optional.
+- Fix cannot read propert 'parentNode' of undefined on line 84.

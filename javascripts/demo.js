@@ -43,7 +43,8 @@ document.getElementById('infoBtn').addEventListener('click',function(){
             'text': 'This is a modal in a modal.',
             'type': 'success',
             'buttons':[
-              {'text':'Dismiss','class':'destiny-dismiss'}
+              {'text':'Dismiss','class':'destiny-dismiss'},
+              {'text':'Dismiss All','class':'destiny-dismiss-all'}
             ]
           }).add();})
       },
