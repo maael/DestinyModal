@@ -4,7 +4,7 @@ document.getElementById('defaultBtn').addEventListener('click',function(){
     'text': 'This is a default modal.',
     'type': 'default',
     'buttons':[
-      {text:'Dismiss',class:'destiny-dismiss'}
+      {'text':'Dismiss','class':'destiny-dismiss'}
     ]
   }).add();
 },false);
@@ -14,7 +14,7 @@ document.getElementById('primaryBtn').addEventListener('click',function(){
     'text': 'This is a primary modal.',
     'type': 'primary',
     'buttons':[
-      {text:'Dismiss',class:'destiny-dismiss'}
+      {'text':'Dismiss','class':'destiny-dismiss'}
     ]
   }).add();
 },false);
@@ -24,7 +24,7 @@ document.getElementById('successBtn').addEventListener('click',function(){
     'text': 'This is a success modal.',
     'type': 'success',
     'buttons':[
-      {text:'Dismiss',class:'destiny-dismiss'}
+      {'text':'Dismiss','class':'destiny-dismiss'}
     ]
   }).add();
 },false);
@@ -34,18 +34,20 @@ document.getElementById('infoBtn').addEventListener('click',function(){
     'text': 'This is a info modal.',
     'type': 'info',
     'buttons':[
-      {text:'Accept',class:'accept-modal'},
-      {text:'Dismiss',class:'destiny-dismiss'}
-    ]
-  }).add();
-},false);
-document.getElementByClassName('accept-modal')[0].addEventListener('click',function(){
-  DestinyModal({
-    'title': 'Accepted',
-    'text': 'This is a modal in a modal.',
-    'type': 'success',
-    'buttons':[
-      {text:'Dismiss',class:'destiny-dismiss'}
+      {
+        'text':'Accept',
+        'class':'accept-modal',
+        'function': (function(){
+          DestinyModal({
+            'title': 'Accepted',
+            'text': 'This is a modal in a modal.',
+            'type': 'success',
+            'buttons':[
+              {'text':'Dismiss','class':'destiny-dismiss'}
+            ]
+          }).add();})
+      },
+      {'text':'Dismiss','class':'destiny-dismiss'}
     ]
   }).add();
 },false);
@@ -55,7 +57,7 @@ document.getElementById('warningBtn').addEventListener('click',function(){
     'text': 'This is a warning modal.',
     'type': 'warning',
     'buttons':[
-      {text:'Dismiss',class:'destiny-dismiss'}
+      {'text':'Dismiss','class':'destiny-dismiss'}
     ]
   }).add();
 },false);
@@ -65,7 +67,7 @@ document.getElementById('dangerBtn').addEventListener('click',function(){
     'text': 'This is a danger modal.',
     'type': 'danger',
     'buttons':[
-      {text:'Dismiss',class:'destiny-dismiss'}
+      {'text':'Dismiss','class':'destiny-dismiss'}
     ]
   }).add();
 },false);

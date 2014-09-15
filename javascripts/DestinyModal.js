@@ -1,7 +1,7 @@
 function DestinyModal(options) {
   options = options || {};
   this.title = options.title || "";
-  this.main = options.main || "";
+  this.text = options.text || "";
   this.type = options.type || "default";
   this.iconName = "fa-"+options.iconName || null;
   this.buttons = options.buttons || [];
@@ -17,7 +17,7 @@ function DestinyModal(options) {
         textMain = document.createElement('p'),
         buttons = document.createElement('div'),
         textTitleNode = document.createTextNode(this.title),
-        textMainNode = document.createTextNode(this.main);
+        textMainNode = document.createTextNode(this.text);
     //Add text to nodes
     textTitle.appendChild(textTitleNode);
     textMain.appendChild(textMainNode);
@@ -41,6 +41,9 @@ function DestinyModal(options) {
       button.appendChild(buttonText);
       if(this.buttons[i].class){
         button.className = this.buttons[i].class;
+      }
+      if(this.buttons[i].function){
+        button.addEventListener('click',this.buttons[i].function,false);
       }
       buttons.appendChild(button);
     }
@@ -72,7 +75,9 @@ function DestinyModal(options) {
   this.remove = function () {
     var overlays = document.getElementsByClassName('destiny-overlay'),
         index = (overlays.length>1) ? (overlays.length-1) : 0;
-    overlays[index].parentNode.removeChild(overlays[index]);
+    if(overlays[index]){
+      overlays[index].parentNode.removeChild(overlays[index]);
+    }
   };
   this.removeAll = function () {
     while(document.getElementsByClassName('destiny-overlay').length>0){
