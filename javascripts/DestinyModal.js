@@ -68,7 +68,7 @@ function DestinyModal(options) {
     document.body.appendChild(overlay);
     //Add dismissal events
     var dismisses = document.getElementsByClassName('destiny-dismiss'),
-        dismissAlls = document.getElementByClassName('destiny-dismiss-all');
+        dismissAlls = document.getElementsByClassName('destiny-dismiss-all');
     for(var j = 0; j<dismisses.length; j++) {
       dismisses[j].addEventListener('click',this.remove,false);
     }

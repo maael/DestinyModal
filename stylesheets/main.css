@@ -53,6 +53,39 @@ table {
 
 /* line 2, ../sass/main.scss */
 body {
-  background: url(https://wegameunited.files.wordpress.com/2014/07/destiny-beta_orbital-view.jpg) top center no-repeat fixed;
-  background-size: cover;
+  background: url(../images/stardust.png);
+}
+
+/* line 5, ../sass/main.scss */
+.content {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+/* line 11, ../sass/main.scss */
+.diamond {
+  background-color: #777;
+  cursor: pointer;
+  float: left;
+  height: 175px;
+  line-height: 175px;
+  margin: 50px;
+  text-align: center;
+  transform: rotate(45deg);
+  width: 175px;
+}
+
+/* line 22, ../sass/main.scss */
+.diamond:nth-of-type(4n) {
+  clear: both;
+}
+
+/* line 25, ../sass/main.scss */
+.text {
+  color: #FFFFFF;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  transform: rotate(-45deg);
 }
