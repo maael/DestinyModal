@@ -35,6 +35,27 @@ This function will remove the topmost modal from the DOM.
 #####```removeAll()```
 This function will remove all modals from the DOM.
 
+###Modal Element Layout
+When created, the modal will have the following layout of elements and classes.
+```HTML
+  <div class="destiny-overlay destiny-{modal-type} {destiny-fade-{in|out}}">
+    <div class="destiny-content">
+      <div class="destiny-row">
+        <div class="destiny-icon">
+          <i class="{icon class}"></i>
+        </div>
+        <div class="destiny-text">
+          <h1>{Title}</h1>
+          <p>{Text}</p>
+        </div>
+      </div>
+      <div class="destiny-buttions">
+        <p class="{button.class}">{button.text}</p>
+      </div>
+    </div>
+  </div>
+```
+
 ###Button Object
 Button objects are objects which have the properties text and class. Text is a required property, while class is optional. If the button object has the class ```destiny-dismiss```, it will automatically add an eventListener for the button's click event that will trigger the ```remove()``` function. If the button object has the class ```destiny-dismiss-all```, it will automatically add an eventListener for the button's click event that will trigger the ```removeAll()``` function.
 
@@ -43,5 +64,5 @@ Button objects are objects which have the properties text and class. Text is a r
 ```
 
 ##To Do
-- Make animation optional.
-- Fix cannot read propert 'parentNode' of undefined on line 84.
+-[x] Make animation optional.
+-[ ] Fix cannot read propert 'parentNode' of undefined on line 84.
