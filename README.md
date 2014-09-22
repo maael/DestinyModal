@@ -64,5 +64,5 @@ Button objects are objects which have the properties text and class. Text is a r
 ```
 
 ##To Do
--[x] Make animation optional.
--[ ] Fix cannot read propert 'parentNode' of undefined on line 84.
+- [x] Make animation optional.
+- [ ] Fix cannot read propert 'parentNode' of undefined on line 84.
