@@ -5,6 +5,7 @@ function DestinyModal(options) {
   this.type = options.type || "default";
   this.iconName = "fa-"+options.iconName || null;
   this.buttons = options.buttons || [];
+  this.animation = options.animation || false;
   this.add = function () {
     //Create basic nodes  
     var overlay = document.createElement('div'),
@@ -48,7 +49,8 @@ function DestinyModal(options) {
       buttons.appendChild(button);
     }
     //Add classes and ids
-    overlay.className = "destiny-overlay destiny-fade-in destiny-"+this.type;
+    overlay.className = "destiny-overlay destiny-"+this.type;
+    overlay.className = ((this.animation) ? " destiny-fade" : "");
     content.className = "destiny-content";
     row.className = "destiny-row";
     icon.className = "destiny-icon";
@@ -78,23 +80,26 @@ function DestinyModal(options) {
   };
   this.remove = function () {
     var overlays = document.getElementsByClassName('destiny-overlay'),
-        index = (overlays.length>1) ? (overlays.length-1) : 0;
+        index = (overlays.length>1) ? (overlays.length-1) : 0,
+        animationTimeout = ((overlays[index].className.indexOf("destiny-fade-in")>-1) ? 1000 : 0);
         overlays[index].className = overlays[index].className.replace("destiny-fade-in","destiny-fade-out");
     if(overlays[index]){
-      setTimeout(function(){overlays[index].parentNode.removeChild(overlays[index]);}, 1000);
+      setTimeout(function(){overlays[index].parentNode.removeChild(overlays[index]);}, animationTimeout);
     }
   };
   this.removeAll = function () {
-    var overlays = document.getElementsByClassName('destiny-overlay');
+    var overlays = document.getElementsByClassName('destiny-overlay'),
+        animationTimeout = 0;
     function delegatedRemove(s) {
       return function() {
         overlays[s].parentNode.removeChild(overlays[s]);
       };
     }
     for(var i = (overlays.length-1); i>=0 ;i--) {
+      animationTimeout = ((overlays[i].className.indexOf("destiny-fade-in")>-1) ? 1000 : 0);
       overlays[i].className = overlays[i].className.replace("destiny-fade-in","destiny-fade-out");
       if(overlays[i]){
-        setTimeout(delegatedRemove(i), 1000);
+        setTimeout(delegatedRemove(i), animationTimeout);
       }
     }
   };
