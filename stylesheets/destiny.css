@@ -6,12 +6,11 @@
   font-weight: lighter;
   height: 100%;
   left: 0;
-  opacity: 0;
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 100%;
 }
-/* line 13, ../sass/destiny.scss */
+/* line 12, ../sass/destiny.scss */
 .destiny-overlay .destiny-content {
   background-color: rgba(27, 27, 27, 0.7);
   border-top: 0.5vmin solid;
@@ -25,14 +24,14 @@
   transform: translate(-50%, -50%);
   width: 100%;
 }
-/* line 26, ../sass/destiny.scss */
+/* line 25, ../sass/destiny.scss */
 .destiny-overlay .destiny-row {
   left: 50%;
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
 }
-/* line 31, ../sass/destiny.scss */
+/* line 30, ../sass/destiny.scss */
 .destiny-overlay .destiny-row .destiny-icon {
   border: 1.8vmin solid;
   border-radius: 50%;
@@ -43,7 +42,7 @@
   text-align: center;
   width: 20vmin;
 }
-/* line 41, ../sass/destiny.scss */
+/* line 40, ../sass/destiny.scss */
 .destiny-overlay .destiny-row .destiny-text {
   display: table-cell;
   font-size: 3vmin;
@@ -52,14 +51,14 @@
   left: 3vmin;
   vertical-align: top;
 }
-/* line 48, ../sass/destiny.scss */
+/* line 47, ../sass/destiny.scss */
 .destiny-overlay .destiny-row .destiny-text h1 {
   font-size: 3vmin;
   letter-spacing: 0.2em;
   margin-bottom: 1.6em;
   text-transform: uppercase;
 }
-/* line 56, ../sass/destiny.scss */
+/* line 55, ../sass/destiny.scss */
 .destiny-overlay .destiny-buttons {
   background-color: #000000;
   bottom: -4vmin;
@@ -70,72 +69,73 @@
   text-align: center;
   width: 100%;
 }
-/* line 65, ../sass/destiny.scss */
+/* line 64, ../sass/destiny.scss */
 .destiny-overlay .destiny-buttons p {
   cursor: pointer;
   display: inline-block;
   margin-right: 5vmin;
 }
-/* line 69, ../sass/destiny.scss */
+/* line 68, ../sass/destiny.scss */
 .destiny-overlay .destiny-buttons p:last-of-type {
   margin-right: 0;
 }
-/* line 75, ../sass/destiny.scss */
+/* line 74, ../sass/destiny.scss */
 .destiny-overlay.destiny-default .destiny-content {
   border-color: #2f5c59;
 }
-/* line 79, ../sass/destiny.scss */
+/* line 78, ../sass/destiny.scss */
 .destiny-overlay.destiny-default .destiny-row .destiny-icon {
   border-color: #777777;
   color: #777777;
 }
-/* line 86, ../sass/destiny.scss */
+/* line 85, ../sass/destiny.scss */
 .destiny-overlay.destiny-primary .destiny-content {
   border-color: #0070ac;
 }
-/* line 90, ../sass/destiny.scss */
+/* line 89, ../sass/destiny.scss */
 .destiny-overlay.destiny-primary .destiny-row .destiny-icon {
   border-color: #428bca;
   color: #428bca;
 }
-/* line 97, ../sass/destiny.scss */
+/* line 96, ../sass/destiny.scss */
 .destiny-overlay.destiny-success .destiny-content {
   border-color: #149d3e;
 }
-/* line 101, ../sass/destiny.scss */
+/* line 100, ../sass/destiny.scss */
 .destiny-overlay.destiny-success .destiny-row .destiny-icon {
   border-color: #5cb85c;
   color: #5cb85c;
 }
-/* line 108, ../sass/destiny.scss */
+/* line 107, ../sass/destiny.scss */
 .destiny-overlay.destiny-info .destiny-content {
   border-color: #13a5c0;
 }
-/* line 112, ../sass/destiny.scss */
+/* line 111, ../sass/destiny.scss */
 .destiny-overlay.destiny-info .destiny-row .destiny-icon {
   border-color: #5bc0de;
   color: #5bc0de;
 }
-/* line 119, ../sass/destiny.scss */
+/* line 118, ../sass/destiny.scss */
 .destiny-overlay.destiny-warning .destiny-content {
   border-color: #a89230;
 }
-/* line 123, ../sass/destiny.scss */
+/* line 122, ../sass/destiny.scss */
 .destiny-overlay.destiny-warning .destiny-row .destiny-icon {
   border-color: #f0ad4e;
   color: #f0ad4e;
 }
-/* line 130, ../sass/destiny.scss */
+/* line 129, ../sass/destiny.scss */
 .destiny-overlay.destiny-danger .destiny-content {
   border-color: #4e1412;
 }
-/* line 134, ../sass/destiny.scss */
+/* line 133, ../sass/destiny.scss */
 .destiny-overlay.destiny-danger .destiny-row .destiny-icon {
   border-color: #962f30;
   color: #962f30;
 }
-/* line 141, ../sass/destiny.scss */
+/* line 140, ../sass/destiny.scss */
 .destiny-overlay.destiny-fade-in {
+  opacity: 0;
   -moz-animation: destiny-fade-in 1s 1 both;
   -webkit-animation: destiny-fade-in 1s 1 both;
   animation: destiny-fade-in 1s 1 both;

@@ -6,8 +6,7 @@
   font-weight: lighter;
   height: 100%;
   left: 0;
-  opacity: 0;
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 100%;
   .destiny-content {
@@ -138,7 +137,8 @@
     }
   }
   //Animation
-  &.destiny-fade-in {
+  &.destiny-fade-in { 
+    opacity: 0;
     @include animation(destiny-fade-in 1s 1 both);
   }
   &.destiny-fade-out {
