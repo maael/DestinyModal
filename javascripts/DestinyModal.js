@@ -50,7 +50,7 @@ function DestinyModal(options) {
     }
     //Add classes and ids
     overlay.className = "destiny-overlay destiny-"+this.type;
-    overlay.className += ((this.animation) ? " destiny-fade" : "");
+    overlay.className += ((this.animation) ? " destiny-fade-in" : "");
     content.className = "destiny-content";
     row.className = "destiny-row";
     icon.className = "destiny-icon";

@@ -59,7 +59,8 @@ document.getElementById('warningBtn').addEventListener('click',function(){
     'type': 'warning',
     'buttons':[
       {'text':'Dismiss','class':'destiny-dismiss'}
-    ]
+    ],
+    'animation': true
   }).add();
 },false);
 document.getElementById('dangerBtn').addEventListener('click',function(){
