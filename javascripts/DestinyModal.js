@@ -83,9 +83,11 @@ function DestinyModal(options) {
         index = (overlays.length>1) ? (overlays.length-1) : 0,
         animationTimeout = ((overlays[index].className.indexOf("destiny-fade-in")>-1) ? 1000 : 0);
         overlays[index].className = overlays[index].className.replace("destiny-fade-in","destiny-fade-out");
-    if(overlays[index]){
-      setTimeout(function(){overlays[index].parentNode.removeChild(overlays[index]);}, animationTimeout);
-    }
+      setTimeout(function(){
+        if(overlays[index]) {
+          overlays[index].parentNode.removeChild(overlays[index]);
+        }
+      }, animationTimeout);
   };
   this.removeAll = function () {
     var overlays = document.getElementsByClassName('destiny-overlay'),
